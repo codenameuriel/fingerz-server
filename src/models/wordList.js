@@ -5,6 +5,10 @@ const WordList = mongoose.model('WordList', {
     type: String,
     required: true
   },
+  name: {
+    type: String,
+    required: true  
+  },
   words: {
     type: Array,
     required: true
