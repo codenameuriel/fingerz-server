@@ -13,4 +13,13 @@ router.post('/wordlists', async (req, res) => {
   }
 });
 
+router.get('/wordlists', async (req, res) => {
+  try {
+    const wordLists = await WordList.find({});
+    res.send(wordLists);
+  } catch (error) {
+    res.status.send(500).send();
+  }
+});
+
 module.exports = router;
